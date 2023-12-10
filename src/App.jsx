@@ -4,14 +4,20 @@ import viteLogo from '/vite.svg'
 
 //components
 import Navbar from './components/Navbar/Navbar'
-
+import CartWidget from './components/CartWidget/CartWidget'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Navbar />    
+      <div>
+        <Navbar />  
+      </div> 
+      <div>
+        <ItemListContainer greeting={'Hola Bodeguero! ¿Cómo va tu día?'} />
+      </div>
     </>
   )
 }
