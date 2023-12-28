@@ -1,17 +1,19 @@
 import React from 'react'
 import CartWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
+
 
 const Navbar = () => {
   return (
     <>
         <nav>
         <ul className='flex rounded-2xl bg-blue-700 h-12 justify-evenly items-center space-x-11 shadow-2xl'>
-          <li className='text-white font-extrabold hover:transform hover:scale-110 transition-transform'>Inicio</li>
+          <Link className='text-white font-extrabold hover:transform hover:scale-110 transition-transform' to="/">Inicio</Link>
 
-          <li className='text-white font-extrabold hover:transform hover:scale-110 transition-transform'>Contacto</li>
+          <Link className='text-white font-extrabold hover:transform hover:scale-110 transition-transform' to="/contacto">Contacto</Link>
 
-          <li className='text-white font-extrabold hover:transform hover:scale-110 transition-transform'>Ayuda</li>
-
+          <Link className='text-white font-extrabold hover:transform hover:scale-110 transition-transform' to="/ayuda">Ayuda</Link>
+          
           <CartWidget />
         </ul>
         </nav>
