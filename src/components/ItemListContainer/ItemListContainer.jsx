@@ -2,25 +2,33 @@ import React, { useEffect, useState } from 'react'
 import CardItem from '../CardItem/CardItem'
 import axios from 'axios';
 
-const ItemListContainer = ({}) => {
+import { Link } from "react-router-dom"
+
+
+const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    axios('URLAPIITEMS').then((res) => setChars(res.data.item))
+    axios("../../url_items.json").then((res) =>
+      setItems(res.data.productos) 
+    );
+   
   }, []);
-  
-  
+
   return (
-    <div className="mt-20 flex justify-center container mx-auto p-4 bg-gray-200 border rounded-lg">
-    {items.map ((item) => {
-      return (
-        <div>
-            <CardItem item={item} />  
-        </div>
-      );
+    <div className="Cards-List">
+      {items.map((item) => {
+        return (
+          <div key={item.id} className="mt-20 flex justify-center container mx-auto p-4 bg-gray-200 border rounded-lg">
+            <Link to={`/detalles/${item.id}`} >
+              <CardItem item={item} />
+            </Link>
+          </div>
+        );
       })}
-  </div>
+    </div>
   );
-}
+};
 
 export default ItemListContainer
+

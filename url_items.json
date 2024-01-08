@@ -1,0 +1,74 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "tipo": "Camiseta",
+      "precio": 1500,
+      "imagen": "./src/assets/camisetaGodoyCruz.jpeg",
+      "descripcion": "Camiseta oficial de Godoy Cruz"
+    },
+    {
+      "id": 2,
+      "tipo": "Pantalón largo",
+      "precio": 800,
+      "imagen": "./src/assets/pantalonLargoGodoyCruz.jpeg",
+      "descripcion": "Pantalón largo deportivo de Godoy Cruz"
+    },
+    {
+      "id": 3,
+      "tipo": "Gorra",
+      "precio": 200,
+      "imagen": "./src/assets/gorraGodoyCruz.jpeg",
+      "descripcion": "Gorra con el logo de Godoy Cruz"
+    },
+    {
+      "id": 4,
+      "tipo": "Camiseta suplente",
+      "precio": 250,
+      "imagen": "./src/assets/camisetaSuplenteGodoyCruz.jpeg",
+      "descripcion": "Primer camiseta suplente de Godoy Cruz"
+    },
+    {
+      "id": 5,
+      "tipo": "Buzo",
+      "precio": 1200,
+      "imagen": "./src/assets/buzoGodoyCruz.jpeg",
+      "descripcion": "Buzo cómodo con el escudo de Godoy Cruz"
+    },
+    {
+      "id": 6,
+      "tipo": "Medias",
+      "precio": 100,
+      "imagen": "./src/assets/mediasGodoyCruz.jpeg",
+      "descripcion": "Medias para entrenamiento de Godoy Cruz"
+    },
+    {
+      "id": 7,
+      "tipo": "Campera",
+      "precio": 1800,
+      "imagen": "./src/assets/camperaGodoyCruz.jpeg",
+      "descripcion": "Campera de estación intermedia de Godoy Cruz"
+    },
+    {
+      "id": 8,
+      "tipo": "Pantalón Corto",
+      "precio": 300,
+      "imagen": "./src/assets/pantalonCortoGodoyCruz.jpeg",
+      "descripcion": "Pantalón corto de entrnamiento de Godoy Cruz"
+    },
+    {
+      "id": 9,
+      "tipo": "Piluso",
+      "precio": 150,
+      "imagen": "./src/assets/pilusoGodoyCruz.jpeg",
+      "descripcion": "Piluso hinchada Godoy Cruz"
+    },
+    {
+      "id": 10,
+      "tipo": "Mochila",
+      "precio": 600,
+      "imagen": "./src/assets/mochilaGodoyCruz.jpeg",
+      "descripcion": "Mochila de Godoy Cruz"
+    }
+  ]
+}
