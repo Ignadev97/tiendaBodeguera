@@ -11,7 +11,6 @@ const CardItem = ({ item }) => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
           image={imagen}
           alt="Imágen de referencia"
         />
