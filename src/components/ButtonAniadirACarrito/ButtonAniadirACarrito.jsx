@@ -8,10 +8,26 @@ import { ItemsContext } from "../../context/ItemContext";
 
 const ButtonAniadirACarrito = (dato) => {
 
-  const { setCartItems, cartItems } = useContext(ItemsContext)  
+  const { setCartItems, cartItems, cantidad } = useContext(ItemsContext) 
 
-  function añadirACarrito (){
-    setCartItems([...cartItems,dato])
+  const añadirACarrito =  () => {
+    const item =  dato.dato
+    
+    setCartItems([... cartItems, item])
+
+    const itemExistente = cartItems.find(producto => producto.id === item.id)
+    
+    if (itemExistente) {
+      const nuevosItems = cartItems.map ( producto => {
+        const nuevaCantidad = itemExistente.quantity + cantidad 
+       return producto.id === item.id ? { ... producto, quantity: nuevaCantidad } : producto
+      })
+      setCartItems(nuevosItems)
+    
+    }else{
+      const itemConCantidad1 = { ... item, quantity:cantidad }
+      setCartItems([... cartItems, itemConCantidad1])
+    }
   }
   
 

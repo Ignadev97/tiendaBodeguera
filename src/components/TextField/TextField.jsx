@@ -44,7 +44,6 @@ export default function FormPropsTextFields(data) {
         sx={{
           "& .MuiTextField-root": { m: 1, width: "25ch" },
         }}
-        noValidate
         autoComplete="off"
         onSubmit={onSubmit}
         className="flex flex-col justify-center"

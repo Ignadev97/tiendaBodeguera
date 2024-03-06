@@ -1,46 +1,41 @@
-import React, { useEffect, useState } from 'react'
-import CardItem from '../CardItem/CardItem'
-import 'tailwindcss/tailwind.css';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import "tailwindcss/tailwind.css";
+import ItemList from "../ItemList/ItemList";
 
-import { Link } from "react-router-dom"
 
-//import de firestore 
-import { db } from '../../firebase/firebaseConfig'
-import { collection, query, getDocs} from 'firebase/firestore'
+//import de firestore
+import { db } from "../../firebase/firebaseConfig";
+import { collection, query, getDocs, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
+  let {categoria} = useParams()
 
   useEffect(() => {
-
     const traerProductos = async () => {
-      const q = query(collection(db, "productos"))
-      const querySnapshot = await getDocs(q)
+      const q = categoria
+        ? query(
+            collection(db, "productos"),
+            where("categoria", "==", categoria)
+          )
+        : query(collection(db, "productos"));
+      const querySnapshot = await getDocs(q);
       const docs = [];
       querySnapshot.forEach((doc) => {
         docs.push({ ...doc.data(), id: doc.id });
       });
-      
+
       setItems(docs);
-    }
+    };
     traerProductos();
-      
-  }, []);
+  }, [categoria]);
 
   return (
     <div className=" grid grid-cols-3 ">
-      {items.map((item) => {
-        return(
-          <div className='p-5'>
-            <Link to={`/detalles/${item.id}`}> 
-              <CardItem item={item} key={item.id} />
-            </Link>
-          </div>
-        )
-      })}
+      <ItemList items={items} />
     </div>
   );
 };
 
-export default ItemListContainer
-
+export default ItemListContainer;

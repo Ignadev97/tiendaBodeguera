@@ -1,9 +1,9 @@
+import "tailwindcss/tailwind.css";
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
-
 
 import { Link } from 'react-router-dom'
 
@@ -20,8 +20,8 @@ const MenuDesplegable = () => {
   return (
     <div>
       <Button
-        id="fade-button"
         className='text-white font-extrabold hover:transform hover:scale-110 transition-transform normal-case'
+        id="fade-button"
         aria-controls={open ? 'fade-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}

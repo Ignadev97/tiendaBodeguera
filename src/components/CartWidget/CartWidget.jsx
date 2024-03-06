@@ -1,7 +1,7 @@
 import React from "react";
 
 //context 
-import { useContext, useState, useEffect } from "react";
+import { useContext} from "react";
 import { ItemsContext } from "../../context/ItemContext";
 
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
@@ -10,11 +10,9 @@ const CartWidget = () => {
 
   const { cartItems } = useContext(ItemsContext)
 
-  const [numeroItems, setNumeroItems] = useState(cartItems.length)
 
-  useEffect(() => {
-    setNumeroItems(cartItems.length)
-  },[cartItems])
+  const totalCarrito = cartItems.reduce((total, productos) => total + productos.quantity, 0)
+
 
   return (
     <>
@@ -22,7 +20,7 @@ const CartWidget = () => {
         <span>
           <ShoppingCartRoundedIcon sx={{ color: "white" }} />
         </span>
-        <p className="text-white">{numeroItems}</p>
+        <p className="text-white">{totalCarrito}</p>
       </div>
     </>
   );

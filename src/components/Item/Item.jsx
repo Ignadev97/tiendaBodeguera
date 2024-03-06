@@ -1,11 +1,12 @@
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-const CardItem = ({ item }) => {
-  const {id, tipo, precio, imagen, descripcion} = item
+const Item = ({ item }) => {
+  const { tipo, precio, imagen, descripcion} = item
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -30,4 +31,4 @@ const CardItem = ({ item }) => {
   );
 }
 
-export default CardItem
+export default Item

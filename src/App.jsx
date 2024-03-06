@@ -1,7 +1,6 @@
-import { useState } from "react";
-import viteLogo from "/vite.svg";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "tailwindcss/tailwind.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 //pages
 import InicioPage from "./pages/inicioPage/inicioPage";
