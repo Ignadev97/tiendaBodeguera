@@ -32,7 +32,7 @@ const ItemListContainer = () => {
   }, [categoria]);
 
   return (
-    <div className=" grid grid-cols-3 ">
+    <div>
       <ItemList items={items} />
     </div>
   );

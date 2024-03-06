@@ -6,7 +6,7 @@ import CartWidget from "../CartWidget/CartWidget";
 
 const ItemDetail = ({item}) => {
   return (
-    <div className=" grid grid-cols-2">
+    <div className="sm:grid grid-cols-2 ">
     <div className="w-1/2 p-1">
       <img
         src={item.imagen}

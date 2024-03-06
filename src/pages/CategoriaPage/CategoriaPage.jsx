@@ -4,7 +4,7 @@ import ItemListContainer from "../../components/ItemListContainer/ItemListContai
 const CategoriaPage = () => {
     
     return (
-    <div className=" grid grid-cols-3 ">
+    <div className="grid ">
       <ItemListContainer />
     </div>
   )

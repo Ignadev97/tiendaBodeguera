@@ -4,7 +4,7 @@ import ItemDetailContainer from "../../components/ItemDetailContainer/ItemDetail
 const PaginaDetalle = () => {
 
   return (
-    <div className=" grid grid-cols-2">
+    <div>
      <ItemDetailContainer />
     </div>
   );
