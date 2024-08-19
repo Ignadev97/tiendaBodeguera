@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //pages
 import InicioPage from "./pages/InicioPage/InicioPage";
-import AyudaPage from "./pages/ayudaPage/ayudaPage";
-import ContactoPage from "./pages/contactoPage/contactoPage";
-import ProductosPage from "./pages/productosPage/productosPage";
+import AyudaPage from "./pages/AyudaPage/AyudaPage";
+import ContactoPage from "./pages/ContactoPage/ContactoPage";
+import ProductosPage from "./pages/ProductosPage/ProductosPage";
 import PaginaDetalle from "./pages/PaginaDetalle/PaginaDetalle";
 import CategoriaPage from "./pages/CategoriaPage/CategoriaPage";
 import CarritoPage from "./pages/CarritoPage/CarritoPage";
