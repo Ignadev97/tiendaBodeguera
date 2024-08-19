@@ -1,9 +1,10 @@
 import React from 'react'
+import ItemListContainer from '../../components/ItemListContainer/ItemListContainer'
 
 const ProductosPage = () => {
   return (
     <div>
-      <h1>productos</h1>
+      <ItemListContainer />
     </div>
   )
 }

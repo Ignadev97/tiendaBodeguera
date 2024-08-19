@@ -22,6 +22,7 @@ import { db } from "./firebase/firebaseConfig";
 
 //context
 import { ItemsProvider } from "./context/ItemContext";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             <Route path="/categoria/:categoria" element={<CategoriaPage />} />
           </Routes>
         </Router>
+        <Footer />
       </ItemsProvider>
     </>
   );

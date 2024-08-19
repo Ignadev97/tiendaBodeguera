@@ -20,14 +20,13 @@ const MenuDesplegable = () => {
   return (
     <div>
       <Button
-        className='text-white font-extrabold hover:transform hover:scale-110 transition-transform normal-case'
         id="fade-button"
         aria-controls={open ? 'fade-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Categorias
+        <span className="text-white font-extrabold normal-case text-base hover:transform hover:scale-110 transition-transform" >Categorias</span>
       </Button>
       <Menu
         id="fade-menu"
